@@ -1,0 +1,14 @@
+<nav>
+  <ul>
+    <li>
+      <a routerLink="admins" [class.activated]= "currentUrl == '/admins'" routerLinkActive="router-link-active" >
+        <i class="material-icons">verified_user</i><i>Admin Log In</i>
+      </a>
+    </li>
+    <li>
+      <a routerLink="" [class.activated]= "currentUrl == '/'" routerLinkActive="router-link-active" >
+      <i class="material-icons">movie</i><i>List Videos</i>
+      </a>
+    </li>
+  </ul>
+</nav>

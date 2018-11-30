@@ -1,0 +1,14 @@
+<h1>
+  Videos Available
+</h1>
+
+<ul>
+  <li *ngFor="let video of videos$"><button style="float:right;">Rent</button>
+    <a routerLink="/video/{{video._id}}">{{video.title}}</a>
+    <ul>
+    <li>rating :{{video.rating}}</li>
+    <li>lenght: {{video.lenght}}</li>
+    <li>genre: {{video.genre}}</li>
+    </ul>
+  </li>
+</ul>

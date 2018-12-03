@@ -1,5 +1,6 @@
 <h1> {{ video$.title }}</h1>
 
+<form (submit)="onRent(video$)" #form>
 <ul>
   <li>
     <strong>Rating: </strong>{{video$.rating}}
@@ -25,16 +26,18 @@
 </ul>
 
 <ul>
-  <li>
-    <strong>User: </strong>
+  <li><strong>Customers:</strong>
+      <select [(ngModel)]="rentObject$" name='rentObject$' >
+          <option  *ngFor="let customer of customers$" [ngValue]="customer">{{customer.firstName}} {{customer.lastName}} </option>
+      </select>
   </li>
 </ul>
 <ul>
   <li>
-   <button>Rent</button>
+  <button>Rent</button>
   </li>
 </ul>
-
+</form>
 
 
 

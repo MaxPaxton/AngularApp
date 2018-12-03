@@ -2,9 +2,14 @@
   Videos Available
 </h1>
 
-<ul>
-  <li *ngFor="let video of videos$"><button style="float:right;">Rent</button>
-    <a routerLink="/video/{{video._id}}">{{video.title}}</a>
+<ul id='myTable'>
+  <li *ngFor="let video of videos$">
+    <strong>{{video.title}}</strong>
+    <strong style="float:right;">
+    <p *ngIf="video.rent=='available'; then thenBlock ;else elseBlock"></p>
+    <ng-template #thenBlock><a routerLink="/video/{{video._id}}">Available</a></ng-template>
+    <ng-template #elseBlock>Not available</ng-template>
+  </strong>
     <ul>
     <li>rating :{{video.rating}}</li>
     <li>lenght: {{video.lenght}}</li>

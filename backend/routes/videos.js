@@ -58,6 +58,9 @@ router.put('/:id', (req, res, next) => {
   if(video.password){
     updVideo.password = video.password;
   }
+  if(video.rent){
+    updVideo.rent = video.rent;
+  }
   if(!updVideo){
     res.status(400);
   }else{

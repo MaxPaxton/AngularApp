@@ -3,6 +3,7 @@ import { Routes, RouterModule} from '@angular/router';
 import { AdminsComponent} from './admins/admins.component';
 import { VideosComponent} from './videos/videos.component';
 import { VideoDetailsComponent } from './video-details/video-details.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,10 @@ const routes: Routes = [
   {
     path: 'admins',
     component: AdminsComponent
+  },
+  {
+    path: 'dashboard',
+    component: DashboardComponent
   }
 ];
 

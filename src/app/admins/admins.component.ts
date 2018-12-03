@@ -12,4 +12,9 @@ export class AdminsComponent implements OnInit {
   ngOnInit() {
   }
 
+  loginAdmin(event) {
+    console.log(event);
+    event.preventDefault();
+  }
+
 }

@@ -1,7 +1,7 @@
-<form (submit)='loginAdmin($event)'>
-  <input type='text' placeholder="username">
+<form (submit)='loginAdmin($event)' method="POST">
+  <input type='text' placeholder="email" id="email">
   <br>
-  <input type='password' placeholder="password">
+  <input type='password' placeholder="password" id="password">
   <br>
-  <input type='submit' value='Log In'>
+  <input type='submit' value='Log In' id="submit">
 </form>

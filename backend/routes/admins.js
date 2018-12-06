@@ -2,6 +2,28 @@ const express = require("express");
 const AdminModel = require('../models/admin');
 const mongoose = require('mongoose');
 const router = express.Router();
+var bodyParser = require('body-parser');
+var app = express();
+
+app.use(bodyParser.json());
+
+
+//Log in an Admin
+router.post('/', (req, res, next) => {
+
+  console.log('LOG in Attempt reached');
+
+  AdminModel.findOne({ email: req.body.email, password: req.body.password },function(err,admin){
+    if(err){
+      return res.send(err);
+    }
+    if (!admin){
+      return res.json({"success" : false});
+    }
+    return res.json({"success" : true});
+  });
+
+});
 
 //----------------------------------------------------------------
 //----------------------------------------------------------------
@@ -38,7 +60,7 @@ router.get('/:id', (req, res, next) => {
 //----------------------------------------------------------------
 //----------------------------------------------------------------
 //single admin Update
-router.put('/:id', (req, res, next) => {
+router.get('/:id', (req, res, next) => {
 
   console.log('UPDATE: Admin by id: ' + req.params.id);
 
@@ -73,28 +95,7 @@ router.put('/:id', (req, res, next) => {
 
 //----------------------------------------------------------------
 //----------------------------------------------------------------
-//Insert Admin
-router.post('', (req, res, next) => {
 
-  console.log('INSERT: Admin by id: ' + req.params.id);
-
-  var admin = req.body;
-  if(!admin.firstName || !admin.lastName|| !admin.email || !admin.password){
-    res.status(400);
-    console.log('Bad Data for New Admin  INSERT:  by id: ' + req.params.id);
-  }
-  else{
-    AdminModel.save(admin,function(err, admin){
-      if(err){
-        res.send(err);
-      }
-      else{
-        res.json(admin);
-      }
-    });
-  }
-
-});
 //----------------------------------------------------------------
 //----------------------------------------------------------------
 //Single Admin DELETE

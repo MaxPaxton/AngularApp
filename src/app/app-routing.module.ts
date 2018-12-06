@@ -4,6 +4,7 @@ import { AdminsComponent} from './admins/admins.component';
 import { VideosComponent} from './videos/videos.component';
 import { VideoDetailsComponent } from './video-details/video-details.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   {
@@ -20,11 +21,12 @@ const routes: Routes = [
   },
   {
     path: 'admins',
-    component: AdminsComponent
+    component: AdminsComponent,
   },
   {
     path: 'dashboard',
-    component: DashboardComponent
+    component: DashboardComponent,
+    canActivate: [AuthGuard]
   }
 ];
 

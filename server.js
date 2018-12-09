@@ -1,6 +1,9 @@
 
 const app = require("./backend/app");
 const http = require('http');
+const cors = require('cors');
+
+app.use(cors());
 
 const hostname = '127.0.0.1';
 const port = process.env.PORT || "3000";

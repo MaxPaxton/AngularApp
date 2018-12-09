@@ -39,7 +39,7 @@ export class VideoDetailsComponent implements OnInit {
       _id: video._id,
       title: video.title,
       rating: video.rating,
-      lenght: video.lenght,
+      lenght: video.lenght, // dat typo doe
       genre: video.genre,
       rent: 'not available'
     };

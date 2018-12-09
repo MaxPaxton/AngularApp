@@ -1,3 +1,19 @@
-<p>
-  dashboard works!
-</p>
+<h1>
+  Videos Available
+</h1>
+
+<ul id='myTable'>
+  <li *ngFor="let video of videos$">
+    <strong>{{video.title}}</strong>
+    <strong style="float:right;">
+    <p *ngIf="video.rent=='available'; then thenBlock ;else elseBlock"></p>
+    <ng-template #thenBlock><a routerLink="/video/{{video._id}}">Available</a></ng-template>
+    <ng-template #elseBlock>Not available</ng-template>
+  </strong>
+    <ul>
+    <li>Rating :{{video.rating}}</li>
+    <li>Length: {{video.lenght}}</li> <!-- dat typo doe -->
+    <li>Genre: {{video.genre}}</li>
+    </ul>
+  </li>
+</ul>

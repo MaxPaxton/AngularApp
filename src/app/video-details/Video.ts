@@ -1,6 +1,6 @@
 export class Video {
   title: string;
     rating: string;
-    lenght: string;
+    length: string;
     genre: string;
 }

@@ -83,7 +83,7 @@ router.post('', (req, res, next) => {
   console.log('INSERT: Video by id: ');
 
   var video = req.body;
-  if(!video.title || !video.rating || !video.lenght || !video.genre){
+  if(!video.title || !video.rating || !video.lenght /* dat typo doe */ || !video.genre){
     res.status(400);
     console.log('Bad Data for New Video  INSERT: Video by id: ');
   }

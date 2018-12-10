@@ -1,0 +1,39 @@
+<h3>
+  Add a New Video
+</h3>
+
+<form (submit)="onCreate($event, video$)" #form>
+  <ul>
+    <li>
+      <strong>Title: </strong><input type="text" id="title" value="">
+    </li>
+  </ul>
+  <ul>
+    <li>
+      <strong>Rating: </strong><input type="text" id="rating" value="">
+    </li>
+  </ul>
+  <ul>
+    <li>
+      <strong>Length: </strong><input type="text" id="length" value=""> <!-- dat typo though -->
+    </li>
+  </ul>
+  
+  <ul>
+    <li>
+      <strong>Genre: </strong><input type="text" id="genre" value="">
+    </li>
+  </ul>
+  
+  <ul>
+    <li>
+      <strong>Rent: </strong><input type="text" id="rent" value="">
+    </li>
+  </ul>
+  
+  <ul>
+    <li>
+      <button>Create</button>
+    </li>
+  </ul>
+</form>

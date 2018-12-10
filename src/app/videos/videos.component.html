@@ -1,6 +1,6 @@
-<h1>
-  Videos Available
-</h1>
+<h3>
+  Video Stock
+</h3>
 
 <ul id='myTable'>
   <li *ngFor="let video of videos$">
@@ -11,9 +11,15 @@
       <ng-template #elseBlock>Not available</ng-template>
     </strong>
     <ul>
-      <li>Rating :{{video.rating}}</li>
-      <li>Length: {{video.lenght}}</li> <!-- dat typo doe -->
-      <li>Genre: {{video.genre}}</li>
+      <p>
+        Rating :{{video.rating}}
+      </p>
+      <p>
+        Length: {{video.lenght}} <!-- dat typo doe -->
+      </p>
+      <p>
+      	Genre: {{video.genre}}
+      </p>
     </ul>
   </li>
 </ul>

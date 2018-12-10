@@ -15,6 +15,7 @@ import { VideoDetailsComponent } from './video-details/video-details.component';
 import { AuthGuard } from './auth.guard';
 import { AdminVideoDetailsComponent } from './admin-video-details/admin-video-details.component';
 import { AdminVideosComponent } from './admin-videos/admin-videos.component';
+import { AdminVideoCreateComponent } from './admin-video-create/admin-video-create.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { AdminVideosComponent } from './admin-videos/admin-videos.component';
     AdminsComponent,
     VideoDetailsComponent,
     AdminVideoDetailsComponent,
-    AdminVideosComponent
+    AdminVideosComponent,
+    AdminVideoCreateComponent
   ],
   imports: [
     HttpModule,

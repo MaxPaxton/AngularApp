@@ -32,7 +32,7 @@ export class VideoDataService {
     .pipe(tap( rentVideo => console.log(`updated video = ${JSON.stringify(rentVideo)} `)));
   }
     
-  updateVideo(video): Observable<any>  {
+  updateVideo(video): Observable<any>{
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type':  'application/json'
@@ -41,6 +41,17 @@ export class VideoDataService {
     console.log('updateVideoFunc: ' + video._id);
     return this.http.put('http://localhost:3000/api/videos/' + video._id, JSON.stringify(video), httpOptions)
     .pipe(tap( updateVideo => console.log(`updated video = ${JSON.stringify(updateVideo)} `)));
+  }
+
+  createVideo(video): Observable<any>{
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type':  'application/json'
+      })
+    };
+    console.log('createVideoFunc: ' + video.genre)
+    return this.http.post('http://localhost:3000/api/videos/', JSON.stringify(video), httpOptions)
+    .pipe(tap( createVideo => console.log(`updated video = ${JSON.stringify(createVideo)} `)));
   }
       
 }

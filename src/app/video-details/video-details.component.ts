@@ -3,7 +3,7 @@ import { VideoDataService} from '../video-data.service';
 import { Router } from '@angular/router';
 import { ActivatedRoute} from '@angular/router';
 import { CustomerDataServiceService } from '../customer-data-service.service';
-import { Video } from './Video';
+import { Video } from '../Video';
 
 @Component({
   selector: 'app-video-details',

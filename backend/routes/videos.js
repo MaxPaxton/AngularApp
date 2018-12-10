@@ -88,6 +88,8 @@ router.post('', (req, res, next) => {
     console.log('Bad Data for New Video  INSERT: Video by id: ');
   }
   else{
+    VideoModel.create(video);
+    /*
     VideoModel.save(video,function(err, video){
       if(err){
         res.send(err);
@@ -96,8 +98,8 @@ router.post('', (req, res, next) => {
         res.json(video);
       }
     });
+    */
   }
-
 });
 //----------------------------------------------------------------
 //----------------------------------------------------------------

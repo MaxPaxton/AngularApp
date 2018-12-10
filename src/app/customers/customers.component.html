@@ -1,3 +1,24 @@
-<p>
-  customers works!
-</p>
+<h4 style="font-size: 1.5em"><a routerLink="/admin-videos">View Videos</a></h4>
+<h3 style="float: left;">Admin Customer View</h3><br>
+<a routerLink="/admin-customers" style="float: right; font-weight: bold;">Add a Customer</a>
+<br><br>
+
+<ul id='myTable'>
+  <li *ngFor="let user of users$">
+    <strong>{{user.firstName}} {{user.lastName}}</strong>
+    <strong>
+      <a routerLink="/admin-customers" style="float:right; padding-right: 8px">Edit</a><br><br>
+      <form>
+        <button style="float:right;">Delete</button>
+      </form>
+    </strong>
+    <ul>
+      <p>
+        Email: {{user.email}}
+      </p>
+      <p>
+        Password: {{user.password}}
+      </p>
+    </ul>
+  </li>
+</ul>

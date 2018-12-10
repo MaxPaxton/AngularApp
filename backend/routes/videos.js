@@ -3,7 +3,6 @@ const VideoModel = require('../models/video');
 const mongoose = require('mongoose');
 const router = express.Router();
 
-
 //----------------------------------------------------------------
 //----------------------------------------------------------------
 //All Videos
@@ -17,7 +16,6 @@ router.get('', (req, res, next) => {
       res.json(videos);
     }
   })
-
 });
 //----------------------------------------------------------------
 //----------------------------------------------------------------
@@ -89,16 +87,6 @@ router.post('', (req, res, next) => {
   }
   else{
     VideoModel.create(video);
-    /*
-    VideoModel.save(video,function(err, video){
-      if(err){
-        res.send(err);
-      }
-      else{
-        res.json(video);
-      }
-    });
-    */
   }
 });
 //----------------------------------------------------------------
@@ -107,7 +95,6 @@ router.post('', (req, res, next) => {
 router.delete('/:id', (req, res, next) => {
 
   console.log('DELETE: Video by id:' + req.params.id);
-
   
   VideoModel.remove({_id: req.params.id},function(err,video){
     if(err){

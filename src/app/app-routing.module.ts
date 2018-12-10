@@ -7,6 +7,7 @@ import { AdminVideosComponent } from './admin-videos/admin-videos.component';
 import { AdminVideoDetailsComponent } from './admin-video-details/admin-video-details.component'
 import { AuthGuard } from './auth.guard';
 import { AdminVideoCreateComponent } from './admin-video-create/admin-video-create.component';
+import { CustomersComponent } from './customers/customers.component';
 
 const routes: Routes = [
   {
@@ -31,16 +32,20 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
+    path: 'admin-video/create',
+    component: AdminVideoCreateComponent,
+    canActivate: [AuthGuard]
+  },
+  {
     path: 'admin-video/:id',
     component: AdminVideoDetailsComponent,
     canActivate: [AuthGuard]
   },
   {
-    path: 'admin-video-create',
-    component: AdminVideoCreateComponent,
-    //canActivate: [AuthGuard]
+    path: 'admin-customers',
+    component: CustomersComponent,
+    canActivate: [AuthGuard]
   }
-
 ];
 
 @NgModule({

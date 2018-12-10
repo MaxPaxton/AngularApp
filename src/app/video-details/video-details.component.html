@@ -1,6 +1,13 @@
 <h1> {{ video$.title }}</h1>
 
 <form (submit)="onRent(video$)" #form>
+  
+  <ul>
+    <li>
+      <strong>Director: </strong>{{video$.director}}
+    </li>
+  </ul>
+  
   <ul>
     <li>
       <strong>Rating: </strong>{{video$.rating}}

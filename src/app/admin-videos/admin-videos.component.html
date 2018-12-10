@@ -1,26 +1,33 @@
-<h3 style="float: left">Admin Video View</h3><br>
-<a href="/admin-video-create" style="float: right; font-weight: bold;">Add a video</a>
+<h4 style="font-size: 1.5em"><a routerLink="/admin-customers">View Customers</a></h4>
+<h3 style="float: left;">Admin Video View</h3><br>
+<a routerLink="/admin-video/create" style="float: right; font-weight: bold;">Add a video</a>
 <br><br>
 
 <ul id='myTable'>
-    <li *ngFor="let video of videos$">
-      <strong>{{video.title}}</strong>
+  <li *ngFor="let video of videos$">
+    <strong>{{video.title}}</strong>
     <strong>
       <a routerLink="/admin-video/{{video._id}}" style="float:right; padding-right: 8px">Edit</a><br><br>
       <form (submit)="onDelete(video)" #form>
-          <button style="float:right;">Delete</button>
+        <button style="float:right;">Delete</button>
       </form>
     </strong>
     <ul>
-        <p>
-          Rating :{{video.rating}}
-        </p>
-        <p>
-          Length: {{video.lenght}} <!-- dat typo doe -->
-        </p>
-        <p>
-          Genre: {{video.genre}}
-        </p>
-      </ul>
-    </li>
-  </ul>
+      <p>
+        Director: {{video.director}}
+      </p>
+      <p>
+        Rating :{{video.rating}}
+      </p>
+      <p>
+        Length: {{video.lenght}} <!-- dat typo doe -->
+      </p>
+      <p>
+        Genre: {{video.genre}}
+      </p>
+      <p>
+        Status: {{video.rent}}
+      </p>
+    </ul>
+  </li>
+</ul>

@@ -6,26 +6,58 @@
       <strong>Title: </strong><input type="text" id="title" value="{{video$.title}}">
     </li>
   </ul>
+  
   <ul>
     <li>
-      <strong>Rating: </strong><input type="text" id="rating" value="{{video$.rating}}">
-    </li>
-  </ul>
-  <ul>
-    <li>
-      <strong>Length: </strong><input type="text" id="length" value="{{video$.lenght}}"> <!-- dat typo though -->
+      <strong>Director: </strong>
+      <input type="text" id="director" value="">
     </li>
   </ul>
   
   <ul>
     <li>
-      <strong>Genre: </strong><input type="text" id="genre" value="{{video$.genre}}">
+      <strong>Rating: </strong>
+      <select name="rating" id="rating" value="{{video$.rating}}">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
     </li>
   </ul>
   
   <ul>
     <li>
-      <strong>Rent: </strong><input type="text" id="rent" value="{{video$.rent}}">
+      <strong>Length: </strong>
+      <input type="text" id="length" value="{{video$.lenght}}"> <!-- dat typo though -->
+    </li>
+  </ul>
+  
+  <ul>
+    <li>
+      <strong>Genre: </strong>
+      <select name="genre" id="genre">
+        <option value="Action">Action</option>
+        <option value="Comedy">Comedy</option>
+        <option value="Crime">Crime</option>
+        <option value="Drama">Drama</option>
+        <option value="Fantasy">Fantasy</option>
+        <option value="Horror">Horror</option>
+        <option value="Mystery">Mystery</option>
+        <option value="Sci-Fi">Sci-Fi</option>
+        <option value="XXX">XXX</option>
+      </select>
+    </li>
+  </ul>
+  
+  <ul>
+    <li>
+      <strong>Status: </strong>
+      <select name="rent" id="rent">
+        <option value="available">Available</option>
+        <option value="not available">Unavailable</option>
+      </select>
     </li>
   </ul>
   
@@ -34,4 +66,5 @@
       <button>Update</button>
     </li>
   </ul>
+  
 </form>

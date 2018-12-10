@@ -30,7 +30,8 @@ export class AdminVideoCreateComponent implements OnInit {
       rating: target.querySelector('#rating').value,
       lenght: target.querySelector('#length').value, // dat typo doe
       genre: target.querySelector('#genre').value,
-      rent: target.querySelector('#rent').value
+      rent: target.querySelector('#rent').value,
+      director: target.querySelector('#director').value
     };
     this.data.createVideo(newVideo).subscribe(data => {
       console.log('create function called');

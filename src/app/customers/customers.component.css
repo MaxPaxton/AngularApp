@@ -1,0 +1,11 @@
+button {
+    background: none;
+    color: red;
+    border: none;
+    padding: none;
+    text-align: right;
+    font: inherit;
+    font-size: 1.4em;
+    text-emphasis: bold;
+    cursor: pointer;
+}

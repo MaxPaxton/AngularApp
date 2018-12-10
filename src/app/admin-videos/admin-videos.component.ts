@@ -4,7 +4,6 @@ import { Router } from '@angular/router';
 import { ActivatedRoute} from '@angular/router';
 import { Video } from '../Video';
 
-
 @Component({
   selector: 'app-admin-videos',
   templateUrl: './admin-videos.component.html',
@@ -32,6 +31,6 @@ export class AdminVideosComponent implements OnInit, OnChanges {
 
   onDelete(video){
     this.data.deleteVideo(video).subscribe(data => {});
-    
+    this.ngOnInit();
   }
 }

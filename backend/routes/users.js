@@ -2,12 +2,12 @@ const express = require("express");
 const UserModel = require('../models/user');
 const mongoose = require('mongoose');
 const router = express.Router();
-
 //----------------------------------------------------------------
 //----------------------------------------------------------------
 //All Users
+console.log('userModel look');
 router.get('', (req, res, next) => {
-
+  console.log('userModel get');
   UserModel.find(function(err,users){
     if(err){
       res.send(err);
@@ -16,7 +16,6 @@ router.get('', (req, res, next) => {
       res.json(users);
     }
   })
-
 });
 //----------------------------------------------------------------
 //----------------------------------------------------------------
@@ -70,7 +69,6 @@ router.put('/:id', (req, res, next) => {
     });
   }
 });
-
 //----------------------------------------------------------------
 //----------------------------------------------------------------
 //Insert User
@@ -100,7 +98,6 @@ router.post('', (req, res, next) => {
 //Single User DELETE
 router.delete('/:id', (req, res, next) => {
 
-
   console.log('DELETE: User by id:' + req.params.id);
 
   UserModel.remove({_id: req.params.id},function(err,user){
@@ -111,7 +108,6 @@ router.delete('/:id', (req, res, next) => {
       res.json(user);
     }
   });
-
 });
 
 module.exports = router;

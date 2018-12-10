@@ -8,10 +8,11 @@ import { Observable } from 'rxjs';
 export class CustomerDataServiceService {
 
   constructor(private http: HttpClient) {
-    console.log('Video Data Service Initialized...');
-   }
+    console.log('Customer Data Service Initialized...');
+  }
 
   getUsers() {
+    console.log('getUsers');
     return this.http.get('http://localhost:3000/api/users');
   }
 

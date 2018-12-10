@@ -14,7 +14,6 @@ export class AdminVideoDetailsComponent implements OnInit {
 
   video$: Object;
   videos: Video[];
-  rentObject$: Object;
 
   constructor(private data: VideoDataService, private route: ActivatedRoute,
     private router: Router) {
@@ -42,6 +41,6 @@ export class AdminVideoDetailsComponent implements OnInit {
     this.data.updateVideo(updatedVideo).subscribe(data => {
       console.log('update function called');
     });
-    this.router.navigate(['/admin-videos'])
+    this.router.navigate(['/admin-videos']);
   }
 }

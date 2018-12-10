@@ -53,7 +53,7 @@ router.put('/:id', (req, res, next) => {
     updVideo.rating = video.rating;
   }
   if(video.lenght){
-    updVideo.genre = video.genre;
+    updVideo.lenght = video.lenght;
   }
   if(video.genre){
     updVideo.genre = video.genre;
@@ -106,9 +106,9 @@ router.post('', (req, res, next) => {
 //Single Video DELETE
 router.delete('/:id', (req, res, next) => {
 
-
   console.log('DELETE: Video by id:' + req.params.id);
 
+  
   VideoModel.remove({_id: req.params.id},function(err,video){
     if(err){
       res.send(err);

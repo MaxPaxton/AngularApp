@@ -53,6 +53,11 @@ export class VideoDataService {
     return this.http.post('http://localhost:3000/api/videos/', JSON.stringify(video), httpOptions)
     .pipe(tap( createVideo => console.log(`updated video = ${JSON.stringify(createVideo)} `)));
   }
-      
+
+  deleteVideo(video): Observable<any>{
+    console.log('deleteVideoFunc: ' + video.title)
+    return this.http.delete('http://localhost:3000/api/videos/' + video._id)
+    .pipe(tap( deleteVideo => console.log(`deleted video = ${JSON.stringify(deleteVideo)} `)));
+  }
 }
     

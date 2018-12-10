@@ -5,14 +5,22 @@
 <ul id='myTable'>
     <li *ngFor="let video of videos$">
       <strong>{{video.title}}</strong>
-      <strong style="float:right;">
-      <a routerLink="/admin-video/{{video._id}}">Edit</a><br><br>
-      <a href="/admin-video/{{video._id}}">Delete</a>
+    <strong>
+      <a routerLink="/admin-video/{{video._id}}" style="float:right; padding-right: 8px">Edit</a><br><br>
+      <form (submit)="onDelete(video)" #form>
+          <button style="float:right;">Delete</button>
+      </form>
     </strong>
-      <ul>
-      <li>Rating :{{video.rating}}</li>
-      <li>Length: {{video.lenght}}</li> <!-- dat typo doe -->
-      <li>Genre: {{video.genre}}</li>
+    <ul>
+        <p>
+          Rating :{{video.rating}}
+        </p>
+        <p>
+          Length: {{video.lenght}} <!-- dat typo doe -->
+        </p>
+        <p>
+          Genre: {{video.genre}}
+        </p>
       </ul>
     </li>
   </ul>

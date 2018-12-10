@@ -23,7 +23,7 @@ export class AdminVideoCreateComponent implements OnInit {
   ngOnInit() {
   }
 
-  onCreate(event, video){
+  onCreate(event){
     const target  = event.target;
     const newVideo = {
       title: target.querySelector('#title').value,

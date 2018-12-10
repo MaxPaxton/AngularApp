@@ -40,23 +40,23 @@ router.get('/:id', (req, res, next) => {
 //----------------------------------------------------------------
 //single video Update
 router.put('/:id', (req, res, next) => {
-
+  
   console.log('UPDATE: Video by id: ' + req.params.id);
-
+  
   var video = req.body;
   var updVideo = {};
-
-  if(video.firstName){
-    updVideo.firstName = video.firstName;
+  
+  if(video.title){
+    updVideo.title = video.title;
   }
-  if(video.lastName){
-    updVideo.lasttName = video.lastName;
+  if(video.rating){
+    updVideo.rating = video.rating;
   }
-  if(video.email){
-    updVideo.email = video.email;
+  if(video.lenght){
+    updVideo.genre = video.genre;
   }
-  if(video.password){
-    updVideo.password = video.password;
+  if(video.genre){
+    updVideo.genre = video.genre;
   }
   if(video.rent){
     updVideo.rent = video.rent;

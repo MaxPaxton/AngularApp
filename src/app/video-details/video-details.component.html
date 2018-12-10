@@ -1,44 +1,40 @@
 <h1> {{ video$.title }}</h1>
 
 <form (submit)="onRent(video$)" #form>
-<ul>
-  <li>
-    <strong>Rating: </strong>{{video$.rating}}
-  </li>
-</ul>
-
-<ul>
-  <li>
-    <strong>Length: </strong>{{video$.lenght}} <!-- dat typo though -->
-  </li>
-</ul>
-
-<ul>
-  <li>
-    <strong>Genre: </strong>{{video$.genre}}
-  </li>
-</ul>
-
-<ul>
-  <li>
-    <strong>Rent: </strong>{{video$.rent}}
-  </li>
-</ul>
-
-<ul>
-  <li><strong>Customers:</strong>
+  <ul>
+    <li>
+      <strong>Rating: </strong>{{video$.rating}}
+    </li>
+  </ul>
+  
+  <ul>
+    <li>
+      <strong>Length: </strong>{{video$.lenght}} <!-- dat typo though -->
+    </li>
+  </ul>
+  
+  <ul>
+    <li>
+      <strong>Genre: </strong>{{video$.genre}}
+    </li>
+  </ul>
+  
+  <ul>
+    <li>
+      <strong>Rent: </strong>{{video$.rent}}
+    </li>
+  </ul>
+  
+  <ul>
+    <li><strong>Customers:</strong>
       <select [(ngModel)]="rentObject$" name='rentObject$' >
-          <option  *ngFor="let customer of customers$" [ngValue]="customer">{{customer.firstName}} {{customer.lastName}} </option>
+        <option  *ngFor="let customer of customers$" [ngValue]="customer">{{customer.firstName}} {{customer.lastName}} </option>
       </select>
-  </li>
-</ul>
-<ul>
-  <li>
-  <button>Rent</button>
-  </li>
-</ul>
+    </li>
+  </ul>
+  <ul>
+    <li>
+      <button>Rent</button>
+    </li>
+  </ul>
 </form>
-
-
-
-

@@ -6,14 +6,14 @@
   <li *ngFor="let video of videos$">
     <strong>{{video.title}}</strong>
     <strong style="float:right;">
-    <p *ngIf="video.rent=='available'; then thenBlock ;else elseBlock"></p>
-    <ng-template #thenBlock><a routerLink="/video/{{video._id}}">Available</a></ng-template>
-    <ng-template #elseBlock>Not available</ng-template>
-  </strong>
+      <p *ngIf="video.rent=='available'; then thenBlock ;else elseBlock"></p>
+      <ng-template #thenBlock><a routerLink="/video/{{video._id}}">Available</a></ng-template>
+      <ng-template #elseBlock>Not available</ng-template>
+    </strong>
     <ul>
-    <li>Rating :{{video.rating}}</li>
-    <li>Length: {{video.lenght}}</li> <!-- dat typo doe -->
-    <li>Genre: {{video.genre}}</li>
+      <li>Rating :{{video.rating}}</li>
+      <li>Length: {{video.lenght}}</li> <!-- dat typo doe -->
+      <li>Genre: {{video.genre}}</li>
     </ul>
   </li>
 </ul>

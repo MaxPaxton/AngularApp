@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const videoSchema = mongoose.Schema({
     title: {type: String, required: true},
     rating: {type: String, required: true},
-    length: {type: String, required: true},
+    lenght: {type: String, required: true},
     genre:{type: String, required: true},
     rent: {type: String, required: true}
 })

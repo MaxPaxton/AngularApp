@@ -12,8 +12,9 @@ import { AdminsComponent } from './admins/admins.component';
 import { FormsModule } from '@angular/forms';
 
 import { VideoDetailsComponent } from './video-details/video-details.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { AuthGuard } from './auth.guard';
+import { AdminVideoDetailsComponent } from './admin-video-details/admin-video-details.component';
+import { AdminVideosComponent } from './admin-videos/admin-videos.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { AuthGuard } from './auth.guard';
     VideosComponent,
     AdminsComponent,
     VideoDetailsComponent,
-    DashboardComponent
+    AdminVideoDetailsComponent,
+    AdminVideosComponent
   ],
   imports: [
     HttpModule,

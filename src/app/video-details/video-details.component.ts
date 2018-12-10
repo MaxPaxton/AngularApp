@@ -11,6 +11,7 @@ import { Video } from './Video';
   styleUrls: ['./video-details.component.css'],
   providers: [CustomerDataServiceService]
 })
+
 export class VideoDetailsComponent implements OnInit {
 
   video$: Object;
@@ -54,7 +55,5 @@ export class VideoDetailsComponent implements OnInit {
     this.router.navigate(['/']);
     this.ngOnInit();
   }
-
 }
-
 

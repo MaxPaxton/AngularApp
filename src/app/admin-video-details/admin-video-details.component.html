@@ -1,0 +1,37 @@
+<h1> Update - {{ video$._id }}</h1>
+
+<form (submit)="onUpdate(video$, $event)" #form>
+  <ul>
+    <li>
+      <strong>Title: </strong><input type="text" id="title" value="{{video$.title}}">
+    </li>
+  </ul>
+  <ul>
+    <li>
+      <strong>Rating: </strong><input type="text" id="rating" value="{{video$.rating}}">
+    </li>
+  </ul>
+  <ul>
+    <li>
+      <strong>Length: </strong><input type="text" id="length" value="{{video$.lenght}}"> <!-- dat typo though -->
+    </li>
+  </ul>
+  
+  <ul>
+    <li>
+      <strong>Genre: </strong><input type="text" id="genre" value="{{video$.genre}}">
+    </li>
+  </ul>
+  
+  <ul>
+    <li>
+      <strong>Rent: </strong><input type="text" id="rent" value="{{video$.rent}}">
+    </li>
+  </ul>
+  
+  <ul>
+    <li>
+      <button>Update</button>
+    </li>
+  </ul>
+</form>

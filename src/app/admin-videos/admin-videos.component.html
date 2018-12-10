@@ -1,0 +1,18 @@
+<p>
+  admin-videos works!
+</p>
+
+<ul id='myTable'>
+    <li *ngFor="let video of videos$">
+      <strong>{{video.title}}</strong>
+      <strong style="float:right;">
+      <a routerLink="/admin-video/{{video._id}}">Edit</a><br><br>
+      <a href="/admin-video/{{video._id}}">Delete</a>
+    </strong>
+      <ul>
+      <li>Rating :{{video.rating}}</li>
+      <li>Length: {{video.lenght}}</li> <!-- dat typo doe -->
+      <li>Genre: {{video.genre}}</li>
+      </ul>
+    </li>
+  </ul>

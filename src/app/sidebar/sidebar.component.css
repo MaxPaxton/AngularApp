@@ -4,18 +4,19 @@ nav{
 }
 
 nav ul {
-      list-style-type: none;
-      padding : 0;
-      margin : 0;
-    }
+  list-style-type: none;
+  padding : 0;
+  margin : 0;
+}
 
 nav ul li a{
   color: #fff;
   padding: 20px;
   display: block;
-  }
+  text-align: center
+}
 
 .activated {
-    background-color: #00a8ff;
-  }
+  background-color: #00a8ff;
+}
 

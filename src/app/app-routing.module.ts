@@ -3,7 +3,8 @@ import { Routes, RouterModule} from '@angular/router';
 import { AdminsComponent} from './admins/admins.component';
 import { VideosComponent} from './videos/videos.component';
 import { VideoDetailsComponent } from './video-details/video-details.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { AdminVideosComponent } from './admin-videos/admin-videos.component';
+import { AdminVideoDetailsComponent } from './admin-video-details/admin-video-details.component'
 import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
@@ -24,8 +25,13 @@ const routes: Routes = [
     component: AdminsComponent,
   },
   {
-    path: 'dashboard',
-    component: DashboardComponent,
+    path: 'admin-videos',
+    component: AdminVideosComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'admin-video/:id',
+    component: AdminVideoDetailsComponent,
     canActivate: [AuthGuard]
   }
 ];

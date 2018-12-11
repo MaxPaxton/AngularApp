@@ -22,5 +22,4 @@ export class VideosComponent implements OnInit, OnChanges {
     console.log(changes);
     this.data.getVideos().subscribe(data => this.videos$ = data);
   }
-
 }

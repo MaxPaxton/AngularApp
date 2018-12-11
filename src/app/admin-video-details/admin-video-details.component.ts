@@ -34,7 +34,8 @@ export class AdminVideoDetailsComponent implements OnInit {
       rating: target.querySelector('#rating').value,
       lenght: target.querySelector('#length').value, // dat typo doe
       genre: target.querySelector('#genre').value,
-      rent: target.querySelector('#rent').value
+      rent: target.querySelector('#rent').value,
+      director: target.querySelector('#director').value
     };
     console.log(updatedVideo.genre);
 

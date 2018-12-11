@@ -32,7 +32,6 @@ router.get('/:id', (req, res, next) => {
       res.json(video);
     }
   });
-
 });
 //----------------------------------------------------------------
 //----------------------------------------------------------------
@@ -58,6 +57,9 @@ router.put('/:id', (req, res, next) => {
   }
   if(video.rent){
     updVideo.rent = video.rent;
+  }
+  if(video.director){
+    updVideo.director = video.director;
   }
   if(!updVideo){
     res.status(400);

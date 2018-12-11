@@ -24,7 +24,7 @@ export class AdminsComponent implements OnInit {
         this.router.navigate(['admin-videos']);
         this.Auth.setLoggedIn(true);
       } else {
-        window.alert('You are not in');
+        window.alert('Nice try wiseguy.');
       }
     });
   }
